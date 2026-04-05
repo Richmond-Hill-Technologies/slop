@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study-level ATC simulation on the web — Falcon</title>
+    <meta name="description" content="How Falcon brings study-level air traffic control simulation to any browser using Unity and WebGL.">
+    <link rel="icon" href="favicon.webp" type="image/webp">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <img src="logo.webp" alt="Falcon" class="logo-img">
+        </a>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu" id="menuToggle">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="product.html">Product</a></li>
+            <li><a href="technology.html">Technology</a></li>
+            <li><a href="progress.html">Blog</a></li>
+            <li><a href="mailto:desk@falconatc.com" class="nav-cta">Contact us</a></li>
+        </ul>
+    </div>
+</header>
+
+<main>
+    <article style="padding: 3.5rem 0;">
+        <div class="container">
+            <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="progress.html">Blog</a></p>
+            <div class="post-body">
+                <p class="post-meta">25 October 2025 &mdash; desk@falconatc.com</p>
+                <h1 style="font-size:1.75rem;font-weight:700;letter-spacing:-0.02em;margin-bottom:1.5rem;">Bringing study-level air traffic control simulation to web with Unity</h1>
+
+                <p>All the world's study-level simulators run on-site on offline simulators, typically on computers marked specifically for that use. There has never been a need to make them accessible over the internet — training is typically done on site, next to an instructor.</p>
+
+                <p>For hiring, this is a matter of scalability: requiring applicants to come on site for an assessment reduces overall capacity, which with it comes the problem of selecting <em>who</em> to invite. So, the ability for <em>all</em> applicants to do an assessment at home on any device, even the cheapest of Chromebooks, is necessary to eliminate at least one point of selection failure.</p>
+
+                <p>With this comes our first challenge. Existing "consumer" simulators (read: video games) do not present an accurate representation of an air traffic control environment even close to study-level. Neither do these simulators have scoring features more sophisticated than detecting whether two planes have collided. Autonomous simulators fit for instruction must have rule-breaking detection algorithms.</p>
+
+                <p>To solve these problems, we have developed the Separation Integrity Engine (SIE) alongside our basic terminal simulator. The SIE can detect losses in separation across a variety of scenarios that extend beyond the basic 3 miles horizontally and 1000 feet vertically basic separation minimum.</p>
+
+                <p>This first generation of SIE — which before now have not been implemented on any air traffic control simulator — will detect 99% of all possible errors in the terminal environment.</p>
+
+                <h2>Why Unity?</h2>
+
+                <p>Unity's WebGL export target allows us to compile the full simulation to a format that runs natively in any modern browser. This means candidates need no downloads, no plugins, and no special hardware beyond a browser and a headset — the same barrier to entry as any modern web application.</p>
+
+                <p>The simulation runs at full fidelity in-browser, with radar position updates, flight data block management, flight strip systems, and all voice input processed in real time through the cloud inference layer.</p>
+            </div>
+        </div>
+    </article>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-left">
+                <div class="footer-company">Falcon</div>
+                <p class="footer-address">200 University Ave W<br>Waterloo, ON N2L 3G1, Canada<br>desk@falconatc.com</p>
+                <nav class="footer-nav">
+                    <a href="product.html">Product</a>
+                    <a href="technology.html">Technology</a>
+                    <a href="progress.html">Blog</a>
+                </nav>
+            </div>
+            <div class="footer-right">
+                <div class="footer-supporters-title">Supported by</div>
+                <p class="footer-supporters-list">University of Waterloo<br>Waterloo Institute for Sustainable Aeronautics<br>AC:Aerospace Accelerator</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

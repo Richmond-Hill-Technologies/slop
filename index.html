@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falcon — AI-Powered ATC Assessment Platform</title>
+    <meta name="description" content="Falcon helps Air Navigation Service Providers identify which ATC candidates will succeed — before expensive training begins. Web-based simulation with objective, data-rich assessment.">
+    <link rel="icon" href="favicon.webp" type="image/webp">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <img src="logo.webp" alt="Falcon" class="logo-img">
+        </a>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu" id="menuToggle">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="product.html">Product</a></li>
+            <li><a href="technology.html">Technology</a></li>
+            <li><a href="progress.html">Blog</a></li>
+            <li><a href="mailto:desk@falconatc.com" class="nav-cta">Contact us</a></li>
+        </ul>
+    </div>
+</header>
+
+<main>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <p class="hero-eyebrow">Air Traffic Control — Candidate Assessment</p>
+            <h1 class="hero-headline">Know who belongs in the<br><span class="hl-y">tower</span> before training starts.</h1>
+            <p class="hero-subhead">Falcon is a web-based ATC simulation and assessment platform that gives Air Navigation Service Providers objective, data-rich reports on candidate aptitude — at a fraction of the cost of traditional screening.</p>
+            <div class="hero-actions">
+                <a href="product.html" class="btn btn-primary">See the platform</a>
+                <a href="mailto:desk@falconatc.com" class="btn btn-outline">Talk to us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <div class="stat-strip">
+        <div class="stat-item">
+            <div class="stat-num">&gt;99<span style="font-size:1.5rem">%</span></div>
+            <div class="stat-label">Separation violation detection rate</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-num">5+</div>
+            <div class="stat-label">Scored simulation runs per candidate</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-num">20+</div>
+            <div class="stat-label">Distinct performance metrics tracked</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-num">Web</div>
+            <div class="stat-label">No installs — runs in any modern browser</div>
+        </div>
+    </div>
+
+    <!-- What we do -->
+    <section class="section">
+        <div class="container">
+            <div class="two-col">
+                <div>
+                    <p class="section-label">The Problem</p>
+                    <h2 class="section-title">ATC training is expensive. Attrition is unpredictable.</h2>
+                    <p class="section-desc">Traditional ATC screening relies on aptitude tests and interview panels that struggle to predict real-world performance. Training programs cost tens of thousands of dollars per candidate — and washout rates can exceed 50%.</p>
+                    <p class="section-desc">ANSPs need a better signal before committing to full training pipelines.</p>
+                </div>
+                <div>
+                    <p class="section-label">Our Solution</p>
+                    <h2 class="section-title">Study-level simulation, accessible in a browser.</h2>
+                    <p class="section-desc">Falcon delivers a realistic, browser-based radar simulation environment backed by our Separation Integrity Engine and AI-powered voice recognition layer. Every session generates a detailed, objective candidate report — no evaluator subjectivity required.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature cards -->
+    <section class="section">
+        <div class="container">
+            <p class="section-label">Core Capabilities</p>
+            <div class="three-col" style="margin-top:0;">
+                <div class="feature-card">
+                    <div class="feature-num">01</div>
+                    <div class="feature-title">Radar Simulation</div>
+                    <p class="feature-desc">A study-level terminal area radar environment built in Unity and deployed to the browser via WebGL. Candidates work real traffic scenarios with aircraft following realistic flight dynamics.</p>
+                    <span class="tag tag-yellow">WebGL · Unity · Real-time</span>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-num">02</div>
+                    <div class="feature-title">Separation Integrity Engine</div>
+                    <p class="feature-desc">Our proprietary SIE detects &gt;99% of separation violations in real time. It predicts future conflicts using predicted intercept vectors (PIV) and enforces all horizontal, vertical, and terminal-area separation rules.</p>
+                    <span class="tag tag-purple">Proprietary · Patent-pending</span>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-num">03</div>
+                    <div class="feature-title">Voice Recognition &amp; Inference</div>
+                    <p class="feature-desc">Candidates issue real voice commands. Our LLM-based inference layer understands non-standard phraseology, corrects transcription noise, and scores communication quality against ICAO standards.</p>
+                    <span class="tag tag-yellow">LLM · ICAO · Real speech</span>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-num">04</div>
+                    <div class="feature-title">Objective Scoring</div>
+                    <p class="feature-desc">Each run produces a weighted numerical score incorporating error severity, planning efficiency, communication quality, and multitasking performance — with full audit trails per aircraft and per transmission.</p>
+                    <span class="tag tag-purple">Automated · Auditable</span>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-num">05</div>
+                    <div class="feature-title">Candidate Dashboard</div>
+                    <p class="feature-desc">Evaluators get a structured report covering simulator scores, learning metrics, skills grading across 15+ categories, and AI-generated interview questions tailored to each candidate's specific performance gaps.</p>
+                    <span class="tag tag-yellow">AI-generated · Per-candidate</span>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-num">06</div>
+                    <div class="feature-title">Browser-Native</div>
+                    <p class="feature-desc">The entire platform runs in a modern browser — no downloads, no IT overhead, no specialist hardware. Candidates can be assessed remotely or on-site with nothing more than a headset and a laptop.</p>
+                    <span class="tag tag-purple">Zero-install · Cross-platform</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard preview -->
+    <section class="section">
+        <div class="container">
+            <p class="section-label">The Assessment Report</p>
+            <h2 class="section-title" style="margin-bottom:0.5rem;">Every candidate, quantified.</h2>
+            <p class="section-desc" style="margin-bottom:2.5rem;">Here's what an evaluator sees after a candidate completes their simulation sessions.</p>
+
+            <div class="dashboard-wrap">
+                <div class="dashboard-topbar">
+                    <span class="topbar-dot red"></span>
+                    <span class="topbar-dot yellow"></span>
+                    <span class="topbar-dot green"></span>
+                    <span class="topbar-title">Falcon — Candidate Assessment Dashboard</span>
+                </div>
+                <div class="dashboard-body">
+                    <!-- Candidate header -->
+                    <div class="db-candidate">
+                        <div>
+                            <div class="db-candidate-label">Candidate</div>
+                            <div class="db-candidate-id">#852</div>
+                        </div>
+                        <div style="display:flex;gap:3rem;align-items:center;">
+                            <div class="db-score-big">
+                                <div class="db-candidate-label">Simulator Score</div>
+                                <div class="db-score-num" style="color:#f59e0b;">68.4</div>
+                            </div>
+                            <div class="db-score-big">
+                                <div class="db-candidate-label">Learning Score</div>
+                                <div class="db-score-num" style="color:#22c55e;">82.4</div>
+                            </div>
+                            <div class="db-score-big">
+                                <div class="db-candidate-label">Overall</div>
+                                <div class="db-score-num" style="color:#3b82f6;">75.4</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Simulator runs -->
+                    <div class="db-card">
+                        <div class="db-card-header">
+                            <span class="db-card-title">Simulator Runs</span>
+                            <span style="font-size:0.7rem;color:#9ca3af;">5 sessions</span>
+                        </div>
+                        <div class="db-card-body">
+                            <div class="db-run-row header">
+                                <span>Run</span>
+                                <span class="hide-mobile">Sep Loss</span>
+                                <span class="hide-mobile">Critical</span>
+                                <span class="hide-mobile">Significant</span>
+                                <span class="hide-mobile">Minor</span>
+                                <span>Score</span>
+                            </div>
+                            <div class="db-run-row">
+                                <span style="font-weight:600;font-size:0.8rem;">1</span>
+                                <span class="hide-mobile"><span class="err-pill err-sep">0</span></span>
+                                <span class="hide-mobile"><span class="err-pill err-crit">0</span></span>
+                                <span class="hide-mobile"><span class="err-pill err-sig">0</span></span>
+                                <span class="hide-mobile"><span class="err-pill err-min">0</span></span>
+                                <span><div class="score-badge score-green">100</div></span>
+                            </div>
+                            <div class="db-run-row">
+                                <span style="font-weight:600;font-size:0.8rem;">2</span>
+                                <span class="hide-mobile"><span class="err-pill err-sep">2</span></span>
+                                <span class="hide-mobile"><span class="err-pill err-crit">1</span></span>
+                                <span class="hide-mobile"><span class="err-pill err-sig">2</span></span>
+                                <span class="hide-mobile"><span class="err-pill err-min">1</span></span>
+                                <span><div class="score-badge score-red">47</div></span>
+                            </div>
+                            <div class="db-run-row">
+                                <span style="font-weight:600;font-size:0.8rem;">3</span>
+                                <span class="hide-mobile"><span class="err-pill err-sep">2</span></span>
+                                <span class="hide-mobile"><span class="err-pill err-crit">1</span></span>
+                                <span class="hide-mobile"><span class="err-pill err-sig">3</span></span>
+                                <span class="hide-mobile"><span class="err-pill err-min">2</span></span>
+                                <span><div class="score-badge score-red">21</div></span>
+                            </div>
+                            <div class="db-run-row">
+                                <span style="font-weight:600;font-size:0.8rem;">4</span>
+                                <span class="hide-mobile"><span class="err-pill err-sep">0</span></span>
+                                <span class="hide-mobile"><span class="err-pill err-crit">1</span></span>
+                                <span class="hide-mobile"><span class="err-pill err-sig">2</span></span>
+                                <span class="hide-mobile"><span class="err-pill err-min">3</span></span>
+                                <span><div class="score-badge score-orange">74</div></span>
+                            </div>
+                            <div class="db-run-row">
+                                <span style="font-weight:600;font-size:0.8rem;">5</span>
+                                <span class="hide-mobile"><span class="err-pill err-sep">0</span></span>
+                                <span class="hide-mobile"><span class="err-pill err-crit">0</span></span>
+                                <span class="hide-mobile"><span class="err-pill err-sig">1</span></span>
+                                <span class="hide-mobile"><span class="err-pill err-min">1</span></span>
+                                <span><div class="score-badge score-yellow">93</div></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skills sidebar -->
+                    <div>
+                        <div class="db-card" style="margin-bottom:1rem;">
+                            <div class="db-card-header">
+                                <span class="db-card-title">Skills Grades</span>
+                            </div>
+                            <div class="db-card-body">
+                                <div class="skill-row"><span class="skill-name">Track miles</span><span class="skill-grade grade-a">A</span></div>
+                                <div class="skill-row"><span class="skill-name">Transmission efficiency</span><span class="skill-grade grade-a">A</span></div>
+                                <div class="skill-row"><span class="skill-name">Number of vectors</span><span class="skill-grade grade-b">B</span></div>
+                                <div class="skill-row"><span class="skill-name">Proper phraseology</span><span class="skill-grade grade-b">B</span></div>
+                                <div class="skill-row"><span class="skill-name">Readback monitoring</span><span class="skill-grade grade-a">A</span></div>
+                                <div class="skill-row"><span class="skill-name">Rate of speech</span><span class="skill-grade grade-a">A</span></div>
+                                <div class="skill-row"><span class="skill-name">Repeated commands</span><span class="skill-grade grade-a">A</span></div>
+                                <div class="skill-row"><span class="skill-name">Proper prioritization</span><span class="skill-grade grade-f">F</span></div>
+                                <div class="skill-row"><span class="skill-name">Strip updates</span><span class="skill-grade grade-a">A</span></div>
+                            </div>
+                        </div>
+                        <div class="db-card">
+                            <div class="db-card-header">
+                                <span class="db-card-title">Most Common Errors</span>
+                            </div>
+                            <div class="db-card-body">
+                                <div style="font-size:0.72rem;margin-bottom:0.4rem;display:flex;justify-content:space-between;align-items:center;"><span style="color:#6d28d9;font-weight:600;">Radar separation 3/1000</span><span style="color:#9ca3af;">×4</span></div>
+                                <div style="font-size:0.72rem;margin-bottom:0.4rem;display:flex;justify-content:space-between;align-items:center;"><span style="color:#c2410c;font-weight:600;">Aircraft cleared to wrong waypoint</span><span style="color:#9ca3af;">×3</span></div>
+                                <div style="font-size:0.72rem;margin-bottom:0.4rem;display:flex;justify-content:space-between;align-items:center;"><span style="color:#c2410c;font-weight:600;">Incorrect turn direction</span><span style="color:#9ca3af;">×3</span></div>
+                                <div style="font-size:0.72rem;margin-bottom:0;display:flex;justify-content:space-between;align-items:center;"><span style="color:#854d0e;font-weight:600;">Late frequency change</span><span style="color:#9ca3af;">×2</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section">
+        <div class="container">
+            <p class="section-label">How It Works</p>
+            <h2 class="section-title" style="margin-bottom:3rem;">Three steps from candidate to decision.</h2>
+            <div class="three-col">
+                <div>
+                    <div style="font-size:3rem;font-weight:700;line-height:1;margin-bottom:1rem;letter-spacing:-0.03em;color:var(--border);">01</div>
+                    <h3 style="font-size:1.1rem;font-weight:600;margin-bottom:0.5rem;">Candidates complete simulation sessions</h3>
+                    <p style="font-size:0.925rem;color:var(--text-muted);line-height:1.65;">Using only a browser and headset, candidates work through a series of progressive radar scenarios — managing real flight strips, issuing voice commands, and handling live traffic.</p>
+                </div>
+                <div>
+                    <div style="font-size:3rem;font-weight:700;line-height:1;margin-bottom:1rem;letter-spacing:-0.03em;color:var(--border);">02</div>
+                    <h3 style="font-size:1.1rem;font-weight:600;margin-bottom:0.5rem;">Platform scores every action automatically</h3>
+                    <p style="font-size:0.925rem;color:var(--text-muted);line-height:1.65;">The SIE and voice inference layer score each session in real time — tracking separation violations, communication quality, planning efficiency, and multitasking across all aircraft simultaneously.</p>
+                </div>
+                <div>
+                    <div style="font-size:3rem;font-weight:700;line-height:1;margin-bottom:1rem;letter-spacing:-0.03em;color:var(--border);">03</div>
+                    <h3 style="font-size:1.1rem;font-weight:600;margin-bottom:0.5rem;">Evaluators receive a structured report</h3>
+                    <p style="font-size:0.925rem;color:var(--text-muted);line-height:1.65;">A detailed per-candidate dashboard shows scores, skills grading, common error patterns, and AI-generated interview questions — giving hiring panels everything they need to make a confident decision.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section class="section">
+        <div class="container">
+            <p class="section-label">The Team</p>
+            <h2 class="section-title" style="margin-bottom:2rem;">Built by engineers obsessed with aviation safety.</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-name">Matthew Zhang</div>
+                    <div class="team-role">Co-founder</div>
+                    <p class="team-bio">Leads platform architecture and the Separation Integrity Engine. Deep background in real-time systems, simulation fidelity, and ATC operations.</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-name">Ian Tan</div>
+                    <div class="team-role">Co-founder</div>
+                    <p class="team-bio">Leads the voice recognition and LLM inference layer. Background in natural language processing, speech systems, and machine learning at scale.</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-name">David Hood</div>
+                    <div class="team-role">Co-founder</div>
+                    <p class="team-bio">Leads product, infrastructure, and ANSP partnerships. Background in software engineering and deploying safety-critical systems for regulated industries.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Supporters -->
+    <section class="section-sm">
+        <div class="container">
+            <p class="section-label" style="margin-bottom:1.25rem;">Backed &amp; Supported By</p>
+            <div class="supporter-list">
+                <span class="supporter-badge">University of Waterloo</span>
+                <span class="supporter-badge">Waterloo Institute for Sustainable Aeronautics</span>
+                <span class="supporter-badge">AC:Aerospace Accelerator</span>
+            </div>
+            <p style="margin-top:1rem;font-size:0.85rem;color:var(--text-muted);">Falcon is incorporated in Canada and headquartered at 200 University Ave W, Waterloo, ON N2L 3G1.</p>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="cta-banner">
+        <div class="container">
+            <h2 class="section-title">Ready to see Falcon in action?</h2>
+            <p class="section-desc">We work directly with ANSPs to tailor the assessment pipeline to local airspace rules, traffic profiles, and phraseology standards.</p>
+            <a href="mailto:desk@falconatc.com" class="btn btn-primary">Request a demo — desk@falconatc.com</a>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-left">
+                <div class="footer-company">Falcon</div>
+                <p class="footer-address">200 University Ave W<br>Waterloo, ON N2L 3G1, Canada<br>desk@falconatc.com</p>
+                <nav class="footer-nav">
+                    <a href="product.html">Product</a>
+                    <a href="technology.html">Technology</a>
+                    <a href="progress.html">Blog</a>
+                </nav>
+            </div>
+            <div class="footer-right">
+                <div class="footer-supporters-title">Supported by</div>
+                <p class="footer-supporters-list">University of Waterloo<br>Waterloo Institute for Sustainable Aeronautics<br>AC:Aerospace Accelerator</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

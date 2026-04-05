@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product — Falcon</title>
+    <meta name="description" content="Falcon's ATC assessment platform: web-based radar simulation, objective scoring, and structured candidate reports for Air Navigation Service Providers.">
+    <link rel="icon" href="favicon.webp" type="image/webp">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <img src="logo.webp" alt="Falcon" class="logo-img">
+        </a>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu" id="menuToggle">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="product.html" class="active">Product</a></li>
+            <li><a href="technology.html">Technology</a></li>
+            <li><a href="progress.html">Blog</a></li>
+            <li><a href="mailto:desk@falconatc.com" class="nav-cta">Contact us</a></li>
+        </ul>
+    </div>
+</header>
+
+<main>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <p class="hero-eyebrow">Product Overview</p>
+            <h1 class="hero-headline">The complete ATC<br>candidate <span class="hl-p">assessment pipeline.</span></h1>
+            <p class="hero-subhead">From a candidate's first login to a hiring panel's final decision — Falcon handles every step with rigorous, reproducible data.</p>
+        </div>
+    </section>
+
+    <!-- Platform overview -->
+    <section class="section">
+        <div class="container">
+            <p class="section-label">Platform Components</p>
+            <div class="tech-item">
+                <div class="tech-name">Simulation Environment</div>
+                <div class="tech-detail">
+                    <p><strong>Study-level terminal area radar control,</strong> built in Unity and served to the browser via WebGL. No downloads, no plugins — candidates access their simulation session from any modern browser.</p>
+                    <p>The environment models realistic aircraft flight dynamics, procedural clearances, and ATIS broadcasts. Traffic complexity scales with each successive run, allowing the platform to stress-test candidate performance under increasing workload.</p>
+                    <p>Candidates interact using voice commands through a standard USB or Bluetooth headset — the same hardware they'd use in a real ATC environment.</p>
+                </div>
+            </div>
+            <div class="tech-item">
+                <div class="tech-name">Scoring Engine</div>
+                <div class="tech-detail">
+                    <p>Every session is scored automatically by the <strong>Separation Integrity Engine (SIE)</strong> in real time. The SIE detects &gt;99% of separation violations using predicted intercept vectors — the same principle underlying real STCA systems — and classifies each event by severity:</p>
+                    <ul style="margin:0.75rem 0 0.75rem 1.25rem;font-size:0.975rem;color:var(--text-muted);line-height:1.75;">
+                        <li><strong style="color:#6d28d9;">Separation Loss</strong> — actual radar or vertical separation infringement (−20 pts)</li>
+                        <li><strong style="color:#b91c1c;">Critical</strong> — clearance that would directly cause a separation loss (−10 pts)</li>
+                        <li><strong style="color:#c2410c;">Significant</strong> — procedural error with safety implications (−5 pts)</li>
+                        <li><strong style="color:#854d0e;">Minor</strong> — non-standard practice or communication error (−2 pts)</li>
+                    </ul>
+                    <p>Run scores are weighted by session difficulty — later, more complex runs contribute more to the final simulator score.</p>
+                </div>
+            </div>
+            <div class="tech-item">
+                <div class="tech-name">Voice &amp; Communication</div>
+                <div class="tech-detail">
+                    <p><strong>Real speech. Real scoring.</strong> The voice layer uses speech-to-text transcription followed by an LLM-based inference model to parse candidate transmissions, correct transcription noise, and evaluate:</p>
+                    <ul style="margin:0.75rem 0 0.75rem 1.25rem;font-size:0.975rem;color:var(--text-muted);line-height:1.75;">
+                        <li>Adherence to ICAO standard phraseology</li>
+                        <li>Rate of speech (words per minute)</li>
+                        <li>Readback error detection — the simulator plants deliberate readback mistakes to test vigilance</li>
+                        <li>Transmission redundancy — issuing commands to aircraft already executing that instruction</li>
+                    </ul>
+                    <p>The model handles non-standard phraseology without penalising candidates for accents or minor linguistic variation — only for procedurally incorrect transmissions.</p>
+                </div>
+            </div>
+            <div class="tech-item">
+                <div class="tech-name">Learning Metrics</div>
+                <div class="tech-detail">
+                    <p><strong>Knowledge assessment alongside practical performance.</strong> Each candidate session includes a structured learning module with knowledge-check questions covering terminal procedures, separation standards, emergency handling, and coordination protocols.</p>
+                    <p>Results are presented as a grid of correct/incorrect answers with expandable detail views, giving evaluators insight into theoretical knowledge gaps that may explain observed simulator performance.</p>
+                </div>
+            </div>
+            <div class="tech-item">
+                <div class="tech-name">Skills Grading</div>
+                <div class="tech-detail">
+                    <p>Candidate performance is decomposed into <strong>15+ distinct skill categories</strong> across three domains:</p>
+                    <ul style="margin:0.75rem 0 0.75rem 1.25rem;font-size:0.975rem;color:var(--text-muted);line-height:1.75;">
+                        <li><strong style="color:var(--text);">Planning</strong> — number of vectors, track miles flown, transmission efficiency</li>
+                        <li><strong style="color:var(--text);">Managing Multitasking</strong> — proper prioritization, flight strip currency</li>
+                        <li><strong style="color:var(--text);">Communication</strong> — phraseology adherence, readback monitoring, speech rate, repeated commands</li>
+                        <li><strong style="color:var(--text);">Situational Awareness</strong> — conflict anticipation, aircraft position awareness</li>
+                        <li><strong style="color:var(--text);">Separation</strong> — horizontal, vertical, and wake-turbulence standards</li>
+                    </ul>
+                    <p>Each subcategory is graded A through F, aggregated from all simulation runs. Grades are weighted by run importance.</p>
+                </div>
+            </div>
+            <div class="tech-item">
+                <div class="tech-name">Interview Guide</div>
+                <div class="tech-detail">
+                    <p><strong>AI-generated, performance-tailored interview questions.</strong> Based on a candidate's specific skill grades and error patterns, the platform generates targeted interview questions for each area of concern — so hiring panels can probe whether a gap reflects a knowledge problem, a stress response, or a deeper aptitude issue.</p>
+                    <p>Each question comes with a suggested ideal answer aligned to the specific skill being assessed, allowing non-specialist panel members to evaluate responses effectively.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- For whom -->
+    <section class="section">
+        <div class="container">
+            <p class="section-label">Who Uses Falcon</p>
+            <div class="two-col">
+                <div>
+                    <h2 class="section-title">Built for ANSPs and training organisations.</h2>
+                    <p class="section-desc">Falcon is designed for Air Navigation Service Providers, ATC training academies, and defence organisations that need to screen large candidate pools efficiently and objectively.</p>
+                    <p class="section-desc">The platform is configurable to local airspace rules, separation standards, and phraseology — so assessment criteria match the operational environment candidates will actually work in.</p>
+                </div>
+                <div>
+                    <div style="background:#fff;border:1px solid var(--border);border-radius:8px;padding:2rem;">
+                        <p class="section-label" style="margin-bottom:1.5rem;">Typical use cases</p>
+                        <div style="display:flex;flex-direction:column;gap:1rem;">
+                            <div style="display:flex;gap:0.75rem;">
+                                <div style="width:6px;flex-shrink:0;background:var(--yellow);border-radius:3px;"></div>
+                                <div>
+                                    <div style="font-size:0.925rem;font-weight:600;margin-bottom:0.2rem;">Pre-course screening</div>
+                                    <div style="font-size:0.875rem;color:var(--text-muted);">Filter applicants before offering costly simulator-based training seats.</div>
+                                </div>
+                            </div>
+                            <div style="display:flex;gap:0.75rem;">
+                                <div style="width:6px;flex-shrink:0;background:var(--purple);border-radius:3px;"></div>
+                                <div>
+                                    <div style="font-size:0.925rem;font-weight:600;margin-bottom:0.2rem;">Progress benchmarking</div>
+                                    <div style="font-size:0.875rem;color:var(--text-muted);">Track development over the course of a training programme.</div>
+                                </div>
+                            </div>
+                            <div style="display:flex;gap:0.75rem;">
+                                <div style="width:6px;flex-shrink:0;background:var(--yellow);border-radius:3px;"></div>
+                                <div>
+                                    <div style="font-size:0.925rem;font-weight:600;margin-bottom:0.2rem;">Remote assessment</div>
+                                    <div style="font-size:0.875rem;color:var(--text-muted);">Screen candidates in any location without requiring travel to a simulator facility.</div>
+                                </div>
+                            </div>
+                            <div style="display:flex;gap:0.75rem;">
+                                <div style="width:6px;flex-shrink:0;background:var(--purple);border-radius:3px;"></div>
+                                <div>
+                                    <div style="font-size:0.925rem;font-weight:600;margin-bottom:0.2rem;">Structured hiring panels</div>
+                                    <div style="font-size:0.875rem;color:var(--text-muted);">Equip interview panels with data-driven questions and evaluation criteria.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="cta-banner">
+        <div class="container">
+            <h2 class="section-title">See the platform with your own scenarios.</h2>
+            <p class="section-desc">We configure Falcon to match your local airspace and separation standards. Get in touch to discuss a pilot deployment.</p>
+            <a href="mailto:desk@falconatc.com" class="btn btn-primary">desk@falconatc.com</a>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-left">
+                <div class="footer-company">Falcon</div>
+                <p class="footer-address">200 University Ave W<br>Waterloo, ON N2L 3G1, Canada<br>desk@falconatc.com</p>
+                <nav class="footer-nav">
+                    <a href="product.html">Product</a>
+                    <a href="technology.html">Technology</a>
+                    <a href="progress.html">Blog</a>
+                </nav>
+            </div>
+            <div class="footer-right">
+                <div class="footer-supporters-title">Supported by</div>
+                <p class="footer-supporters-list">University of Waterloo<br>Waterloo Institute for Sustainable Aeronautics<br>AC:Aerospace Accelerator</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

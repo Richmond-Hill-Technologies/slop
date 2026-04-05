@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATC voice recognition and inference — Falcon</title>
+    <meta name="description" content="How Falcon uses LLMs to understand non-standard ATC phraseology, correct transcription errors, and score candidate communication quality.">
+    <link rel="icon" href="favicon.webp" type="image/webp">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <img src="logo.webp" alt="Falcon" class="logo-img">
+        </a>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu" id="menuToggle">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="product.html">Product</a></li>
+            <li><a href="technology.html">Technology</a></li>
+            <li><a href="progress.html">Blog</a></li>
+            <li><a href="mailto:desk@falconatc.com" class="nav-cta">Contact us</a></li>
+        </ul>
+    </div>
+</header>
+
+<main>
+    <article style="padding: 3.5rem 0;">
+        <div class="container">
+            <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="progress.html">Blog</a></p>
+            <div class="post-body">
+                <p class="post-meta">9 December 2025 &mdash; desk@falconatc.com</p>
+                <h1 style="font-size:1.75rem;font-weight:700;letter-spacing:-0.02em;margin-bottom:1.5rem;">Air traffic control voice recognition and inference</h1>
+
+                <p>Voice recognition software in air traffic control simulators today are unforgiving in phraseology yet inaccurate in voice detection. The rapid development of large language models (LLMs) has opened up many possibilities for voice recognition ATC simulators to accept a wide variety of nonstandard speech.</p>
+
+                <p>The most basic layer of text-based (as transcribed by voice recognition) instructions to air traffic control simulators is like a line of code. Consider a traditional simulator that receives a climb command:</p>
+
+                <p><span class="hl-y">Delta eight niner five</span>&nbsp; <span class="hl-p">climb one seven thousand</span></p>
+
+                <p><em>(computer: Amending DAL895 target altitude to 17000 ft)</em></p>
+
+                <p>We can separate a simple sentence into two components: an <span class="hl-y">aircraft identifier</span>, which is the aircraft we are commanding, and <span class="hl-p">the instruction</span>. However, things can get a bit messy.</p>
+
+                <p><span class="hl-y">Delta eight niner five</span>&nbsp; <span class="hl-p">climb uhhh one seven thousand</span></p>
+
+                <p><em>(computer: "uhhh one seven thousand" is not a valid altitude!)<br>(user: WTF?! This simulator is so stupid!)</em></p>
+
+                <p><span class="hl-y">Delta ate nice five</span>&nbsp; <span class="hl-p">climb one seven thousand</span></p>
+
+                <p><em>(computer: Delta ate nice five is not an aircraft I can find!)<br>(user: I'm ragequitting.)</em></p>
+
+                <h2>The fix</h2>
+
+                <p>The traditional method of fixing this was hardcoding error detection. For example, automatically replacing "ate" with "eight" and deleting any uhhhs. While this can solve 50% of the most common errors, this still leaves a wide failure surface that is enough to frustrate a user to leave. This is where we add the LLM layer.</p>
+
+                <p>LLMs can infer what the user wants to do and communicate it to the simulator in a way the simulator understands without needing complicated hardcoding. It can also identify and correct errors in the voice recognition layer.</p>
+
+                <p><span class="hl-y">Delta ate nice five</span>&nbsp; <span class="hl-p">climb uhh one seven thousand</span> &rarr; <span class="hl-y">Delta eight nine five</span>&nbsp; <span class="hl-p">climb one seven thousand</span></p>
+
+                <p><em>(computer: Amending DAL895 target altitude to 17000 ft)</em></p>
+
+                <h2>Drive-by benefits</h2>
+
+                <p>Aviation uses standardized phraseology. This allows controllers and pilots to communicate in a predictable way even without having ever met. Adherence to this standardized phraseology is taught and graded in pilot and ATC schools. LLMs can now not only understand nonstandard phraseology, but recognize and note its use.</p>
+
+                <p>This means Falcon can score candidates not just on <em>whether</em> their instruction was understood, but on <em>how</em> they issued it — giving evaluators a richer signal on communication quality that correlates strongly with real-world ATC performance.</p>
+            </div>
+        </div>
+    </article>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-left">
+                <div class="footer-company">Falcon</div>
+                <p class="footer-address">200 University Ave W<br>Waterloo, ON N2L 3G1, Canada<br>desk@falconatc.com</p>
+                <nav class="footer-nav">
+                    <a href="product.html">Product</a>
+                    <a href="technology.html">Technology</a>
+                    <a href="progress.html">Blog</a>
+                </nav>
+            </div>
+            <div class="footer-right">
+                <div class="footer-supporters-title">Supported by</div>
+                <p class="footer-supporters-list">University of Waterloo<br>Waterloo Institute for Sustainable Aeronautics<br>AC:Aerospace Accelerator</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

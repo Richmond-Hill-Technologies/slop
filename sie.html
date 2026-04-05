@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Separation integrity engine — Falcon</title>
+    <meta name="description" content="How Falcon's Separation Integrity Engine uses predicted intercept vectors to detect over 99% of ATC separation violations in real time.">
+    <link rel="icon" href="favicon.webp" type="image/webp">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <img src="logo.webp" alt="Falcon" class="logo-img">
+        </a>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu" id="menuToggle">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="product.html">Product</a></li>
+            <li><a href="technology.html">Technology</a></li>
+            <li><a href="progress.html">Blog</a></li>
+            <li><a href="mailto:desk@falconatc.com" class="nav-cta">Contact us</a></li>
+        </ul>
+    </div>
+</header>
+
+<main>
+    <article style="padding: 3.5rem 0;">
+        <div class="container">
+            <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="progress.html">Blog</a></p>
+            <div class="post-body">
+                <p class="post-meta">2 January 2026 &mdash; desk@falconatc.com</p>
+                <h1 style="font-size:1.75rem;font-weight:700;letter-spacing:-0.02em;margin-bottom:1.5rem;">Separation integrity engine</h1>
+
+                <p>Before now no air traffic control simulator in the world could detect errors aside from basic separation losses of 1000 feet vertically and 3 or 5 miles horizontally. However, there are a few more rules than just "don't put the planes close together."</p>
+
+                <img src="sie-image.webp" alt="Separation integrity engine screenshot" class="blog-image">
+
+                <p style="font-size:0.85rem;color:var(--text-muted);margin-top:-0.75rem;"><em>"We're separated from the other cars, so separation is achieved!"</em></p>
+
+                <p>Future conflicts can be greedily predicted by using a predicted intercept vector (PIV). A PIV takes the tracks of two aircraft and returns the closest point they will be. While the tracks of two aircraft may overlap, they may not be a close encounter depending on where the aircraft are along the track.</p>
+
+                <p>The SIE uses a PIV to determine whether a horizontal separation incursion will occur, and determines that two aircraft are at risk of collision where vertical separation does not exist.</p>
+
+                <h2>Determining vertical separation assurance</h2>
+
+                <p>It's okay to break horizontal separation so long as vertical separation is achieved. So the SIE needs to be able to also determine vertical separation. Assessing either separation standard, whether individually or together, is trivial. So long as aircraft are separated by at least 1000 feet (which includes the range between current and cleared altitudes) aircraft are considered separated.</p>
+
+                <h2>Other rules</h2>
+
+                <p>In a terminal environment there are a few rules on separation assurance. That is to say, a loss of separation can occur even if the aircraft are more than 3 or 5 miles and 1000 feet apart. A few examples are turning a jet into the path of an early turn propeller aircraft without vertical separation assured, or turning more than 135 degrees left or right from runway heading without vertical separation from an airport with tower release. The SIE is able to absorb near limitless rules and analyze errors.</p>
+            </div>
+        </div>
+    </article>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-left">
+                <div class="footer-company">Falcon</div>
+                <p class="footer-address">200 University Ave W<br>Waterloo, ON N2L 3G1, Canada<br>desk@falconatc.com</p>
+                <nav class="footer-nav">
+                    <a href="product.html">Product</a>
+                    <a href="technology.html">Technology</a>
+                    <a href="progress.html">Blog</a>
+                </nav>
+            </div>
+            <div class="footer-right">
+                <div class="footer-supporters-title">Supported by</div>
+                <p class="footer-supporters-list">University of Waterloo<br>Waterloo Institute for Sustainable Aeronautics<br>AC:Aerospace Accelerator</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
