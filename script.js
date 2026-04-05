@@ -10,7 +10,9 @@ if (toggle && nav) {
     });
 }
 
-// Specialty rotator — JS-measured dynamic width (standard approach for variable-width highlights)
+// Specialty rotator
+// Each item lives on its own headline line, so width changes never reflow adjacent text.
+// We still animate the container width so the highlight hugs the active word.
 const rotator = document.querySelector('.specialty-rotator');
 if (rotator) {
     const track = rotator.querySelector('.specialty-track');
@@ -18,34 +20,34 @@ if (rotator) {
     const count = items.length;
     let current = 0;
     let widths = [];
+    let itemH = 0;
 
     const measure = () => {
-        // Measure natural width of each item (includes padding from CSS)
-        // Temporarily remove overflow clip to get accurate reads
+        // Temporarily unhide to get accurate measurements
         rotator.style.overflow = 'visible';
+        rotator.style.width = 'auto';
         rotator.style.height = 'auto';
-        widths = items.map(item => item.offsetWidth);
+        track.style.transform = 'none';
+
+        widths = items.map(el => el.offsetWidth);
+        itemH = items[0].offsetHeight;
+
         rotator.style.overflow = 'hidden';
+        track.style.transform = `translateY(${-current * itemH}px)`;
 
-        // Set height to one item's line height
-        rotator.style.height = items[0].offsetHeight + 'px';
-
-        // Apply initial width with no transition
+        // Apply width instantly (no transition) then re-enable
         rotator.style.transition = 'none';
-        rotator.style.width = widths[0] + 'px';
-        // Re-enable transition after paint
-        requestAnimationFrame(() => {
-            rotator.style.transition = '';
-        });
+        rotator.style.width = widths[current] + 'px';
+        rotator.style.height = itemH + 'px';
+        requestAnimationFrame(() => { rotator.style.transition = ''; });
     };
 
     const advance = () => {
         current = (current + 1) % count;
-        track.style.transform = `translateY(calc(-${current} * ${items[0].offsetHeight}px))`;
+        track.style.transform = `translateY(${-current * itemH}px)`;
         rotator.style.width = widths[current] + 'px';
     };
 
-    // Wait for fonts so measurements are accurate
     (document.fonts ? document.fonts.ready : Promise.resolve()).then(() => {
         measure();
         setInterval(advance, 2500);

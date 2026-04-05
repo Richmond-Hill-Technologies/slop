@@ -55,8 +55,11 @@ img { display: block; max-width: 100%; height: auto; }
 /* --- Hero --- */
 .hero { padding: 5rem 0 4rem; border-bottom: 1px solid var(--border); }
 .hero-eyebrow { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
-.hero-headline { font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 1.5rem; max-width: 800px; }
-.hero-subhead { font-size: 1.15rem; color: var(--text-muted); max-width: 600px; line-height: 1.7; margin-bottom: 2rem; }
+.hero-headline { font-size: clamp(2.25rem, 4.5vw, 4rem); font-weight: 700; line-height: 1.1; letter-spacing: -0.025em; margin-bottom: 1.75rem; display: flex; flex-direction: column; gap: 0.08em; }
+.hh-line { display: block; }
+.hh-rotating-line { display: block; line-height: 1.25; }
+.hh-sub { display: block; color: var(--text-muted); font-weight: 600; }
+.hero-subhead { font-size: 1.1rem; color: var(--text-muted); max-width: 580px; line-height: 1.7; margin-bottom: 2rem; }
 .hero-actions { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
 .btn { display: inline-block; padding: 0.65rem 1.5rem; border-radius: 5px; font-size: 0.9rem; font-weight: 600; text-decoration: none; transition: opacity 0.15s; cursor: pointer; }
 .btn:hover { opacity: 0.85; text-decoration: none; }
@@ -198,17 +201,17 @@ img { display: block; max-width: 100%; height: auto; }
 /* --- Specialty rotator --- */
 .specialty-rotator {
     display: inline-block;
-    vertical-align: bottom;
     overflow: hidden;
-    /* height + width set by JS after font load */
-    transition: width 0.55s cubic-bezier(0.77, 0, 0.175, 1);
+    vertical-align: top;
+    /* height set by JS; width animates between items */
+    transition: width 0.5s cubic-bezier(0.77, 0, 0.175, 1);
     will-change: width;
 }
 
 .specialty-track {
     display: flex;
     flex-direction: column;
-    transition: transform 0.55s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
     will-change: transform;
 }
 
@@ -217,8 +220,9 @@ img { display: block; max-width: 100%; height: auto; }
     width: fit-content;
     white-space: nowrap;
     background-color: var(--yellow);
-    padding: 0 3px;
-    border-radius: 2px;
+    padding: 0.05em 0.15em;
+    border-radius: 4px;
+    line-height: 1.2;
 }
 
 /* --- Responsive --- */
