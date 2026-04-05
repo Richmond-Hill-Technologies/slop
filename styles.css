@@ -58,6 +58,7 @@ img { display: block; max-width: 100%; height: auto; }
 .hero-headline { font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.08em; }
 .hh-line { display: block; }
 .hh-rotating-line { display: block; line-height: 1.25; }
+.hh-sub { color: var(--text-muted); }
 .hero-subhead { font-size: 1.1rem; color: var(--text-muted); max-width: 580px; line-height: 1.7; margin-bottom: 2rem; }
 .hero-actions { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
 .btn { display: inline-block; padding: 0.65rem 1.5rem; border-radius: 5px; font-size: 0.9rem; font-weight: 600; text-decoration: none; transition: opacity 0.15s; cursor: pointer; }
