@@ -48,8 +48,8 @@
     <!-- Stats -->
     <div class="stat-strip">
         <div class="stat-item">
-            <div class="stat-num">&gt;99<span style="font-size:1.5rem">%</span></div>
-            <div class="stat-label">Separation violation detection rate</div>
+            <div class="stat-num">~2.5<span style="font-size:1.5rem">hrs</span></div>
+            <div class="stat-label">End-to-end assessment per candidate</div>
         </div>
         <div class="stat-item">
             <div class="stat-num">5+</div>
@@ -72,58 +72,13 @@
                 <div>
                     <p class="section-label">The Problem</p>
                     <h2 class="section-title">ATC training is expensive. Attrition is unpredictable.</h2>
-                    <p class="section-desc">Traditional ATC screening relies on aptitude tests and interview panels that struggle to predict real-world performance. Training programs cost tens of thousands of dollars per candidate — and washout rates can exceed 50%.</p>
+                    <p class="section-desc">Traditional ATC screening relies on aptitude tests and interview panels that struggle to predict real-world performance. Training can cost hundreds of thousands of dollars per candidate — and washout rates are high.</p>
                     <p class="section-desc">ANSPs need a better signal before committing to full training pipelines.</p>
                 </div>
                 <div>
                     <p class="section-label">Our Solution</p>
                     <h2 class="section-title">Study-level simulation, accessible in a browser.</h2>
-                    <p class="section-desc">Falcon delivers a realistic, browser-based radar simulation environment backed by our Separation Integrity Engine and AI-powered voice recognition layer. Every session generates a detailed, objective candidate report — no evaluator subjectivity required.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Feature cards -->
-    <section class="section">
-        <div class="container">
-            <p class="section-label">Core Capabilities</p>
-            <div class="three-col" style="margin-top:0;">
-                <div class="feature-card">
-                    <div class="feature-num">01</div>
-                    <div class="feature-title">Radar Simulation</div>
-                    <p class="feature-desc">A study-level terminal area radar environment built in Unity and deployed to the browser via WebGL. Candidates work real traffic scenarios with aircraft following realistic flight dynamics.</p>
-                    <span class="tag tag-yellow">WebGL · Unity · Real-time</span>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-num">02</div>
-                    <div class="feature-title">Separation Integrity Engine</div>
-                    <p class="feature-desc">Our proprietary SIE detects &gt;99% of separation violations in real time. It predicts future conflicts using predicted intercept vectors (PIV) and enforces all horizontal, vertical, and terminal-area separation rules.</p>
-                    <span class="tag tag-purple">Proprietary · Patent-pending</span>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-num">03</div>
-                    <div class="feature-title">Voice Recognition &amp; Inference</div>
-                    <p class="feature-desc">Candidates issue real voice commands. Our LLM-based inference layer understands non-standard phraseology, corrects transcription noise, and scores communication quality against ICAO standards.</p>
-                    <span class="tag tag-yellow">LLM · ICAO · Real speech</span>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-num">04</div>
-                    <div class="feature-title">Objective Scoring</div>
-                    <p class="feature-desc">Each run produces a weighted numerical score incorporating error severity, planning efficiency, communication quality, and multitasking performance — with full audit trails per aircraft and per transmission.</p>
-                    <span class="tag tag-purple">Automated · Auditable</span>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-num">05</div>
-                    <div class="feature-title">Candidate Dashboard</div>
-                    <p class="feature-desc">Evaluators get a structured report covering simulator scores, learning metrics, skills grading across 15+ categories, and AI-generated interview questions tailored to each candidate's specific performance gaps.</p>
-                    <span class="tag tag-yellow">AI-generated · Per-candidate</span>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-num">06</div>
-                    <div class="feature-title">Browser-Native</div>
-                    <p class="feature-desc">The entire platform runs in a modern browser — no downloads, no IT overhead, no specialist hardware. Candidates can be assessed remotely or on-site with nothing more than a headset and a laptop.</p>
-                    <span class="tag tag-purple">Zero-install · Cross-platform</span>
+                    <p class="section-desc">Falcon delivers a realistic, browser-based radar simulation environment backed by our Separation Integrity Engine and voice recognition layer. Every session generates a detailed, objective candidate report.</p>
                 </div>
             </div>
         </div>
@@ -134,7 +89,7 @@
         <div class="container">
             <p class="section-label">The Assessment Report</p>
             <h2 class="section-title" style="margin-bottom:0.5rem;">Every candidate, quantified.</h2>
-            <p class="section-desc" style="margin-bottom:2.5rem;">Here's what an evaluator sees after a candidate completes their simulation sessions.</p>
+            <p class="section-desc" style="margin-bottom:2.5rem;">Simulator scores, skill grades, and AI-generated interview questions — one report per candidate, automatically.</p>
 
             <div class="dashboard-wrap">
                 <div class="dashboard-topbar">
@@ -267,13 +222,13 @@
             <div class="three-col">
                 <div>
                     <div style="font-size:3rem;font-weight:700;line-height:1;margin-bottom:1rem;letter-spacing:-0.03em;color:var(--border);">01</div>
-                    <h3 style="font-size:1.1rem;font-weight:600;margin-bottom:0.5rem;">Candidates complete simulation sessions</h3>
-                    <p style="font-size:0.925rem;color:var(--text-muted);line-height:1.65;">Using only a browser and headset, candidates work through a series of progressive radar scenarios — managing real flight strips, issuing voice commands, and handling live traffic.</p>
+                    <h3 style="font-size:1.1rem;font-weight:600;margin-bottom:0.5rem;">Candidates complete a short online course</h3>
+                    <p style="font-size:0.925rem;color:var(--text-muted);line-height:1.65;">Structured like a university module, the course walks candidates through ATC fundamentals with reading material and knowledge-check questions. Candidates who don't engage with the material will show it on the simulator.</p>
                 </div>
                 <div>
                     <div style="font-size:3rem;font-weight:700;line-height:1;margin-bottom:1rem;letter-spacing:-0.03em;color:var(--border);">02</div>
-                    <h3 style="font-size:1.1rem;font-weight:600;margin-bottom:0.5rem;">Platform scores every action automatically</h3>
-                    <p style="font-size:0.925rem;color:var(--text-muted);line-height:1.65;">The SIE and voice inference layer score each session in real time — tracking separation violations, communication quality, planning efficiency, and multitasking across all aircraft simultaneously.</p>
+                    <h3 style="font-size:1.1rem;font-weight:600;margin-bottom:0.5rem;">Candidates complete simulation sessions</h3>
+                    <p style="font-size:0.925rem;color:var(--text-muted);line-height:1.65;">Using a browser and microphone, candidates work through a series of progressive radar scenarios — managing real flight strips, issuing voice commands, and handling live traffic.</p>
                 </div>
                 <div>
                     <div style="font-size:3rem;font-weight:700;line-height:1;margin-bottom:1rem;letter-spacing:-0.03em;color:var(--border);">03</div>
@@ -293,17 +248,17 @@
                 <div class="team-card">
                     <div class="team-name">Matthew Zhang</div>
                     <div class="team-role">Co-founder</div>
-                    <p class="team-bio">Leads platform architecture and the Separation Integrity Engine. Deep background in real-time systems, simulation fidelity, and ATC operations.</p>
+                    <p class="team-bio">Leads Falcon's simulation environment. A mechatronics engineer currently interning on Tesla's crash analysis team, Matthew brings first-principles rigour to every aircraft dynamics and real-time systems problem.</p>
                 </div>
                 <div class="team-card">
                     <div class="team-name">Ian Tan</div>
                     <div class="team-role">Co-founder</div>
-                    <p class="team-bio">Leads the voice recognition and LLM inference layer. Background in natural language processing, speech systems, and machine learning at scale.</p>
+                    <p class="team-bio">Ian trained as an ATC student at NAV CANADA, working toward Toronto terminal — responsible for all Pearson arrivals and departures up to FL230 within 26 miles. Falcon is built on what he learned there.</p>
                 </div>
                 <div class="team-card">
                     <div class="team-name">David Hood</div>
                     <div class="team-role">Co-founder</div>
-                    <p class="team-bio">Leads product, infrastructure, and ANSP partnerships. Background in software engineering and deploying safety-critical systems for regulated industries.</p>
+                    <p class="team-bio">Leads voice recognition and LLM inference. David built the pipeline that takes a controller's spoken words and produces scored, structured ATC instructions — connecting speech transcription to an LLM layer that understands what was meant, not just what was said.</p>
                 </div>
             </div>
         </div>
@@ -312,13 +267,12 @@
     <!-- Supporters -->
     <section class="section-sm">
         <div class="container">
-            <p class="section-label" style="margin-bottom:1.25rem;">Backed &amp; Supported By</p>
+            <p class="section-label" style="margin-bottom:1.25rem;">We thank our supporters</p>
             <div class="supporter-list">
                 <span class="supporter-badge">University of Waterloo</span>
                 <span class="supporter-badge">Waterloo Institute for Sustainable Aeronautics</span>
                 <span class="supporter-badge">AC:Aerospace Accelerator</span>
             </div>
-            <p style="margin-top:1rem;font-size:0.85rem;color:var(--text-muted);">Falcon is incorporated in Canada and headquartered at 200 University Ave W, Waterloo, ON N2L 3G1.</p>
         </div>
     </section>
 
@@ -337,7 +291,7 @@
         <div class="footer-inner">
             <div class="footer-left">
                 <div class="footer-company">Falcon</div>
-                <p class="footer-address">200 University Ave W<br>Waterloo, ON N2L 3G1, Canada<br>desk@falconatc.com</p>
+                <p class="footer-address">295 Hagey Blvd<br>Waterloo, ON N2L 6R5, Canada<br>desk@falconatc.com</p>
                 <nav class="footer-nav">
                     <a href="product.html">Product</a>
                     <a href="technology.html">Technology</a>
