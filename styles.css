@@ -55,7 +55,8 @@ img { display: block; max-width: 100%; height: auto; }
 /* --- Hero --- */
 .hero { padding: 5rem 0 4rem; border-bottom: 1px solid var(--border); }
 .hero-eyebrow { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
-.hero-headline { font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.08em; }
+.hero-headline { font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 1.5rem; }
+.hero-headline--stacked { display: flex; flex-direction: column; gap: 0.08em; }
 .hh-line { display: block; }
 .hh-rotating-line { display: block; line-height: 1.25; }
 .hh-sub { color: var(--text-muted); }
