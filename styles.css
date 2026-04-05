@@ -200,9 +200,9 @@ img { display: block; max-width: 100%; height: auto; }
     display: inline-block;
     vertical-align: bottom;
     overflow: hidden;
-    /* height matches one line of the headline */
-    height: 1.15em;
-    line-height: 1.15em;
+    /* height + width set by JS after font load */
+    transition: width 0.55s cubic-bezier(0.77, 0, 0.175, 1);
+    will-change: width;
 }
 
 .specialty-track {
@@ -214,8 +214,9 @@ img { display: block; max-width: 100%; height: auto; }
 
 .specialty-item {
     display: block;
+    width: fit-content;
     white-space: nowrap;
-    line-height: 1.15em;
+    background-color: var(--yellow);
     padding: 0 3px;
     border-radius: 2px;
 }
