@@ -41,24 +41,17 @@
         <div class="container">
             <p class="section-label">Platform Components</p>
             <div class="tech-item">
+                <div class="tech-name">Learning Metrics</div>
+                <div class="tech-detail">
+                    <p><strong>Knowledge assessment alongside practical performance.</strong> Each candidate session includes a structured learning module with knowledge-check questions covering terminal procedures, separation standards, emergency handling, and coordination protocols.</p>
+                </div>
+            </div>
+            <div class="tech-item">
                 <div class="tech-name">Simulation Environment</div>
                 <div class="tech-detail">
                     <p><strong>Study-level terminal area radar control,</strong> built in Unity and served to the browser via WebGL. No downloads, no plugins — candidates access their simulation session from any modern browser.</p>
                     <p>The environment models realistic aircraft flight dynamics and procedural clearances. Traffic complexity scales with each successive run, allowing the platform to stress-test candidate performance under increasing workload.</p>
                     <p>Candidates interact using voice commands through any microphone.</p>
-                </div>
-            </div>
-            <div class="tech-item">
-                <div class="tech-name">Scoring Engine</div>
-                <div class="tech-detail">
-                    <p>Every session is scored automatically by the <strong>Separation Integrity Engine (SIE)</strong> in real time. The SIE detects &gt;99% of separation violations using predicted intercept vectors — the same principle underlying real STCA systems — and classifies each event by severity:</p>
-                    <ul style="margin:0.75rem 0 0.75rem 1.25rem;font-size:0.975rem;color:var(--text-muted);line-height:1.75;">
-                        <li><strong style="color:#6d28d9;">Separation Loss</strong> — actual radar or vertical separation infringement</li>
-                        <li><strong style="color:#b91c1c;">Critical</strong> — clearance that would directly cause a separation loss</li>
-                        <li><strong style="color:#c2410c;">Significant</strong> — procedural error with safety implications</li>
-                        <li><strong style="color:#854d0e;">Minor</strong> — non-standard practice or communication error</li>
-                    </ul>
-                    <p>Run scores are weighted by session difficulty — later, more complex runs contribute more to the final simulator score.</p>
                 </div>
             </div>
             <div class="tech-item">
@@ -75,9 +68,16 @@
                 </div>
             </div>
             <div class="tech-item">
-                <div class="tech-name">Learning Metrics</div>
+                <div class="tech-name">Scoring Engine</div>
                 <div class="tech-detail">
-                    <p><strong>Knowledge assessment alongside practical performance.</strong> Each candidate session includes a structured learning module with knowledge-check questions covering terminal procedures, separation standards, emergency handling, and coordination protocols.</p>
+                    <p>Every session is scored automatically by the <strong>Separation Integrity Engine (SIE)</strong> in real time. The SIE detects &gt;99% of separation violations using predicted intercept vectors — the same principle underlying real STCA systems — and classifies each event by severity:</p>
+                    <ul style="margin:0.75rem 0 0.75rem 1.25rem;font-size:0.975rem;color:var(--text-muted);line-height:1.75;">
+                        <li><strong style="color:#6d28d9;">Separation Loss</strong> — actual radar or vertical separation infringement</li>
+                        <li><strong style="color:#b91c1c;">Critical</strong> — clearance that would directly cause a separation loss</li>
+                        <li><strong style="color:#c2410c;">Significant</strong> — procedural error with safety implications</li>
+                        <li><strong style="color:#854d0e;">Minor</strong> — non-standard practice or communication error</li>
+                    </ul>
+                    <p>Run scores are weighted by session difficulty — later, more complex runs contribute more to the final simulator score.</p>
                 </div>
             </div>
             <div class="tech-item">
