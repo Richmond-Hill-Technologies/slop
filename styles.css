@@ -86,6 +86,25 @@ img { display: block; max-width: 100%; height: auto; }
 .tag-yellow { background: var(--yellow); color: #2a2a00; }
 .tag-purple { background: var(--purple); color: #3a003a; }
 
+/* --- Dashboard scroll wrapper (mobile) --- */
+.dashboard-scroll-outer {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    /* fade on right edge hints at scrollable content */
+    -webkit-mask-image: linear-gradient(to right, black calc(100% - 3rem), transparent 100%);
+    mask-image: linear-gradient(to right, black calc(100% - 3rem), transparent 100%);
+}
+.dashboard-scroll-outer .dashboard-wrap {
+    min-width: 760px;
+}
+@media (min-width: 780px) {
+    .dashboard-scroll-outer {
+        -webkit-mask-image: none;
+        mask-image: none;
+        overflow-x: visible;
+    }
+}
+
 /* --- Dashboard mockup --- */
 .dashboard-wrap { background: #f9fafb; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; box-shadow: 0 8px 40px rgba(0,0,0,0.08); }
 .dashboard-topbar { background: #1a1a1a; padding: 0.75rem 1.25rem; display: flex; align-items: center; gap: 0.5rem; }
