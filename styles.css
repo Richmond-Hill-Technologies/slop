@@ -74,7 +74,7 @@ img { display: block; max-width: 100%; height: auto; }
 .section-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 2rem; }
 .section-title { font-size: clamp(1.5rem, 2.5vw, 2.25rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 1rem; }
 .section-desc { font-size: 1.05rem; color: var(--text-muted); max-width: 600px; line-height: 1.7; }
-.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
 .three-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
 
 /* --- Feature cards --- */
